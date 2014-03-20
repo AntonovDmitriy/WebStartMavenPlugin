@@ -101,7 +101,8 @@ public class WebStartPlugin extends AbstractMojo {
 
     private void launchSignerJars() throws IOException {
         workingDirectory = workingDirectory.replace("\\", "/");
-
+        System.out.println(workingDirectory);
+        
         Process p = Runtime.getRuntime().exec("cmd");
         PrintWriter stdin = new PrintWriter(p.getOutputStream());
         stdin.println("cd " + workingDirectory);
